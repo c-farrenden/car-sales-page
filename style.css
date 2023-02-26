@@ -1,0 +1,177 @@
+/*
+    Filename: style.css 
+    Author: Connor Farrenden
+    Date: 18/10/21
+*/
+
+/* Edits body of webpage elements */
+body {
+	background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 45px;
+    padding-right: 10px;
+    padding-bottom: 110px;
+    padding-left: 0px;
+    font-size: 26px
+}
+
+/* Will edit main heading - h1 */
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 85px;
+    color: darkgoldenrod;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: -1px 0 black, 0 1px black
+}
+
+/* Adds navigation bar effects */ 
+.menu {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: blue
+}
+
+.menu a:link {
+    color: blue;
+}
+
+.menu a:visited {
+    color: purple;
+}
+
+.menu a:hover {
+    color: red;
+    font-size: 1.05em
+}
+
+.menu a:active {
+    color: orange;
+}
+
+/* Edits welcome heading */
+#welcome {
+    color:rgb(243, 98, 45);
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 40px;
+    font-family:cursive
+}
+
+/* Edits welcome paragraph */
+.welcomePara {
+    font-size: 30px;
+    font-family:sans-serif
+}
+
+/* Edits properties of 3 car images */
+img {
+    height: 70%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dotted;
+    border-color: darkolivegreen;
+    border-width: 4px;
+    max-width: 100%; 
+}
+
+/* Editing of car lists - paragraphs */
+ul {
+    list-style-type: square;
+}
+
+li {
+    padding-top: 45px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+    padding-left: 0px;
+    font-size: 26px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/* Edits h3 heading */
+h3 {
+    font-size: 35px;
+    font-family:Copperplate, "Copperplate Gothic Light", fantasy;
+    text-transform: uppercase;
+    color: crimson;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black
+}
+
+/* Edits to footer text + links */
+footer {
+    color: black;
+    float: right;
+    text-align: right;
+    font-size: 20px
+}
+
+footer a {
+    color: blue;
+}
+
+footer a:link {
+    color: blue;
+}
+
+footer a:visited {
+    color: purple;
+}
+
+footer a:hover {
+    color: skyblue;
+    font-size: 1.01em
+}
+
+footer a:active {
+    color: lightblue;
+}
+
+.title {
+    color: orange;
+}
+
+/* Effects to links */
+a {
+    color: blue;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: skyblue;
+    font-size: 1.01em
+}
+
+a:active {
+    color: lightblue;
+}
+
+/* Edits every title */
+.title {
+    color: orange;
+}
+
+/* Edits h2 headings */
+h2 {
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 40px;
+    font-family:Copperplate, "Copperplate Gothic Light", fantasy;
+    color: red
+}
+

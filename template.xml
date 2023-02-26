@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet  href="informationdisplay.xslt" type="text/xsl"?>
+
+<!-- 
+    Filename: template.xml 
+    Author: Connor Farrenden
+    Date: 18/10/21
+-->
+
+<!-- DTD -->
+<!DOCTYPE cars [
+<!-- Can create multiple cars -->
+    <!ELEMENT cars (category, car*)>
+    <!ELEMENT category (title)>
+        <!ELEMENT title (#PCDATA)>
+    <!ELEMENT car (carModel, description, cost, make, yearModel, torque, power, cylinders?, safetyRating, extras+, couponCode?, reviews*, picture+, url)>
+    <!-- Extras includes bluetooth and additionalCost as child elements -->
+    <!ELEMENT extras (bluetooth, additionalCost)>
+        <!-- The required attributes (child elements) for each car in order -->
+        <!ELEMENT carModel (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT cost (#PCDATA)>
+        <!ELEMENT make (#PCDATA)>
+        <!-- All cars will have a year model of 2021 -->
+        <!ENTITY year "2021">
+        <!ELEMENT yearModel (#PCDATA)>
+        <!ELEMENT torque (#PCDATA)>
+        <!ELEMENT power (#PCDATA)>
+        <!ELEMENT cylinders (#PCDATA)>
+        <!ELEMENT safetyRating (#PCDATA)>
+        <!ELEMENT bluetooth (#PCDATA)>
+        <!ELEMENT additionalCost (#PCDATA)>
+        <!ELEMENT couponCode (#PCDATA)>
+        <!ELEMENT reviews (#PCDATA)>
+        <!ELEMENT picture (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>             
+]>
+<!-- XML Elements/Tags (including attributes) -->
+<!-- Cars element -->
+<cars>
+    <!-- Category page for car contained within title -->
+    <category>
+        <title></title>
+    </category>
+    <!-- Create a car element -->
+    <car>
+        <!-- Model of car -->
+        <carModel></carModel>
+        <!-- General description of car -->
+        <description></description>
+        <!-- Car cost -->
+        <cost></cost>
+        <!-- Car make -->
+        <make></make>
+        <!-- Year (constant value for each) -->
+        <yearModel></yearModel>
+        <!-- Torque in Nm -->
+        <torque></torque>
+        <!-- Power in terms of kW -->
+        <power></power>
+        <!-- Number of cylinders (electric cars will be N/A) -->
+        <cylinders></cylinders>
+        <!-- Safety rating in stars -->
+        <safetyRating></safetyRating>
+        <!-- Extras and child elements -->
+        <extras>
+            <!-- Bluetooth support or not -->
+            <bluetooth></bluetooth>
+            <!-- Additional cost to be paid -->
+            <additionalCost></additionalCost>
+        </extras>
+        <!-- Coupon code (if none - N/A)-->
+        <couponCode></couponCode>
+        <!-- Car review -->
+        <reviews></reviews>
+        <!-- Contains image of car -->
+        <picture></picture>
+        <!-- URL link to manufacturers website -->
+        <url></url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <!-- Model of car -->
+        <carModel></carModel>
+        <!-- General description of car -->
+        <description></description>
+        <!-- Car cost -->
+        <cost></cost>
+        <!-- Car make -->
+        <make></make>
+        <!-- Year (constant value for each) -->
+        <yearModel></yearModel>
+        <!-- Torque in Nm -->
+        <torque></torque>
+        <!-- Power in terms of kW -->
+        <power></power>
+        <!-- Number of cylinders (electric cars will be N/A) -->
+        <cylinders></cylinders>
+        <!-- Safety rating in stars -->
+        <safetyRating></safetyRating>
+        <!-- Extras and child elements -->
+        <extras>
+            <!-- Bluetooth support or not -->
+            <bluetooth></bluetooth>
+            <!-- Additional cost to be paid -->
+            <additionalCost></additionalCost>
+        </extras>
+        <!-- Coupon code (if none - N/A)-->
+        <couponCode></couponCode>
+        <!-- Car review -->
+        <reviews></reviews>
+        <!-- Contains image of car -->
+        <picture></picture>
+        <!-- URL link to manufacturers website -->
+        <url></url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <!-- Model of car -->
+        <carModel></carModel>
+        <!-- General description of car -->
+        <description></description>
+        <!-- Car cost -->
+        <cost></cost>
+        <!-- Car make -->
+        <make></make>
+        <!-- Year (constant value for each) -->
+        <yearModel></yearModel>
+        <!-- Torque in Nm -->
+        <torque></torque>
+        <!-- Power in terms of kW -->
+        <power></power>
+        <!-- Number of cylinders (electric cars will be N/A) -->
+        <cylinders></cylinders>
+        <!-- Safety rating in stars -->
+        <safetyRating></safetyRating>
+        <!-- Extras and child elements -->
+        <extras>
+            <!-- Bluetooth support or not -->
+            <bluetooth></bluetooth>
+            <!-- Additional cost to be paid -->
+            <additionalCost></additionalCost>
+        </extras>
+        <!-- Coupon code (if none - N/A)-->
+        <couponCode></couponCode>
+        <!-- Car review -->
+        <reviews></reviews>
+        <!-- Contains image of car -->
+        <picture></picture>
+        <!-- URL link to manufacturers website -->
+        <url></url>
+    </car>
+</cars>

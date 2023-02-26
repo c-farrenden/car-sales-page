@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet  href="informationdisplay.xsl" type="text/xsl"?>
+
+<!-- 
+    Filename: sportscars.xml 
+    Author: Connor Farrenden
+    Date: 18/10/21
+-->
+
+<!-- DTD -->
+<!DOCTYPE cars [
+<!-- Can create multiple cars -->
+    <!ELEMENT cars (category, car*)>
+    <!ELEMENT category (title)>
+        <!ELEMENT title (#PCDATA)>
+    <!ELEMENT car (carModel, description, cost, make, yearModel, torque, power, cylinders?, safetyRating, extras+, couponCode?, reviews*, picture+, url)>
+    <!-- Extras includes bluetooth and additionalCost as child elements -->
+    <!ELEMENT extras (bluetooth, additionalCost)>
+        <!-- The required attributes (child elements) for each car in order -->
+        <!ELEMENT carModel (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT cost (#PCDATA)>
+        <!ELEMENT make (#PCDATA)>
+        <!-- All cars will have a year model of 2021 -->
+        <!ENTITY year "2021">
+        <!ELEMENT yearModel (#PCDATA)>
+        <!ELEMENT torque (#PCDATA)>
+        <!ELEMENT power (#PCDATA)>
+        <!ELEMENT cylinders (#PCDATA)>
+        <!ELEMENT safetyRating (#PCDATA)>
+        <!ELEMENT bluetooth (#PCDATA)>
+        <!ELEMENT additionalCost (#PCDATA)>
+        <!ELEMENT couponCode (#PCDATA)>
+        <!ELEMENT reviews (#PCDATA)>
+        <!ELEMENT picture (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>    
+]>
+<!-- XML Elements -->
+<!-- Cars element -->
+<cars>
+    <!-- Category page for car contained within title -->
+    <category>
+        <title>SPORTS CARS</title>
+    </category>
+    <!-- Create a car element (NOTE: comments are the same for each car) -->
+    <car>
+        <!-- Model of car -->
+        <carModel>Supra</carModel>
+        <!-- General description of car -->
+        <description>The Toyota Supra is a classic sports car that has been further modernised over decades of production. 
+        The Supra features high power and a sleak design for maximised performace and aesthetic appeal. </description>
+        <!-- Car cost -->
+        <cost>$43,090</cost>
+        <!-- Car make -->
+        <make>Toyota</make>
+        <!-- Year (constant value for each) -->
+        <yearModel>&year;</yearModel>
+        <!-- Torque in Nm -->
+        <torque>295Nm</torque>
+        <!-- Power in terms of kW -->
+        <power>285kW</power>
+        <!-- Number of cylinders (electric cars will be N/A) -->
+        <cylinders>4 Cylinders</cylinders>
+        <safetyRating>5 Star Safety Rating</safetyRating>
+        <!-- Extras and child elements -->
+        <extras>
+            <!-- Bluetooth support or not -->
+            <bluetooth>Bluetooth support</bluetooth>
+            <!-- Additional cost to be paid -->
+            <additionalCost>$999</additionalCost>
+        </extras>
+        <!-- Coupon code (if none - N/A)-->
+        <couponCode>SUPRA2021</couponCode>
+        <!-- Car review -->
+        <reviews>Carsguide verdict on the supra is: "This new Supra definitely earns its place on the bedroom wall of teenagers around the world, 
+        and should be pretty high on your consideration list if you are after a fun-to-drive, premium sports coupe.</reviews>
+        <!-- Contains image of car -->
+        <picture>images/ToyotaSupra.png</picture>
+        <!-- URL link to manufacturers website -->
+        <url>https://www.toyota.com/gr-supra/</url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <carModel>Mustang</carModel>
+        <description>The Ford Mustang is a complete classic that has continued to evolve into both a visually pleasing and powerful vehicle.
+        The Mustang features an array of colours and sporty design, making it a beautiful car to driver, whilst packing a V8 of superpower, establishing its high performance on the road.</description>
+        <cost>$50,990</cost>
+        <make>Ford</make>
+        <yearModel>&year;</yearModel>
+        <torque>556Nm</torque>
+        <power>339kW</power>
+        <cylinders>8 Cylinders</cylinders>
+        <safetyRating>5 Star Safety Rating</safetyRating>
+        <extras>
+            <bluetooth>Bluetooth support</bluetooth>
+            <additionalCost>$1699</additionalCost>
+        </extras>
+        <couponCode>N/A</couponCode>
+        <reviews>Chasing Cars remarks that the Mustang is a fast and visually spectacular vehicle. 
+        Stating that: "Driving one in anger should put a massive smile on anyone’s face, even if it’s not the world’s most sophisticated vehicle".</reviews>
+        <picture>images/FordMustang.png</picture>
+        <url>https://www.ford.com.au/performance/mustang/</url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <carModel>MX-5</carModel>
+        <description>Mazda's MX-5 provides the purest sports car performace and handling with its front mid-engine, rear-wheel drive layout.
+        Providing two-passenger seats and an array of colours to choose from, the fairly small design features contrasts with its subtle power.</description>
+        <cost>$36,090</cost>
+        <make>Mazda</make>
+        <yearModel>&year;</yearModel>
+        <torque>205Nm</torque>
+        <power>135kW</power>
+        <cylinders>4 Cylinders</cylinders>
+        <safetyRating>5 Star Safety Rating</safetyRating>
+        <extras>
+            <bluetooth>Bluetooth Support</bluetooth>
+            <additionalCost>$2399</additionalCost>
+        </extras>
+        <couponCode>ZOOMZOOM</couponCode>
+        <reviews>Drive's review on the MX-5 stated: "This could very well be the last time we have the ability to sample such connected, historically pure excellence in internal-combustion terms. 
+        Enjoy it, revel in it, and if it’s your kind of car, buy one. You’ll love every minute of driving it".</reviews>
+        <picture>images/MazdaMX-5.png</picture>
+        <url>https://www.mazda.com.au/cars/mx-5/#rs</url>
+    </car>
+</cars>

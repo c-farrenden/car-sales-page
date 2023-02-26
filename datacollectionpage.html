@@ -1,0 +1,171 @@
+<!-- 
+    Filename: datacollectionpage.html
+    Author: Connor Farrenden
+    Date: 18/10/21
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Title of browser window -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Car Listing</title>
+        <meta charset="UTF-8" />
+        <!-- Javascript for validating form -->
+        <script type="text/javaScript">
+            // Function that will handle all form validation
+            function formValidation() {
+                // Check that a name is entered (textbox is not empty)
+                if(document.myform.sellname.value == "") 
+                {
+                    alert("Please enter a name.");
+                    return false;
+                }
+
+                else
+                // Check that a category is selected (dropwdown menu)
+                if(document.myform.category.value == "select")
+                {
+                    alert("Please select a category.");
+                    return false;
+                }
+
+                else
+                // Check that a box is ticked (radio buttons)
+                if(!document.myform.Safetyrating[0].checked &&
+                !document.myform.Safetyrating[1].checked &&
+                !document.myform.Safetyrating[2].checked &&
+                !document.myform.Safetyrating[3].checked &&
+                !document.myform.Safetyrating[4].checked) 
+                {
+                    alert("Please select a safety rating option.");
+                    return false;
+                } 
+
+                else
+                // Check that atleast one checkbox has been ticked for extras 
+                if(!document.myform.Extras[0].checked &&
+                !document.myform.Extras[1].checked &&
+                !document.myform.Extras[2].checked) 
+                {
+                    alert("Please check atleast one box.");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Main heading -->
+        <h1>List Cars for Sale</h1>
+        <!-- Navigation bar -->
+        <div class="menu">
+            <a href="index.html">HOMEPAGE</a>
+            <a href="sportscars.xml">SPORTS CARS</a>
+            <a href="electriccars.xml">ELECTRIC CARS</a>
+            <a href="privacypolicy.html">PRIVACY POLICY</a>
+            <a href="termsandconditions.html">TERMS AND CONDITIONS</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="contact.html">CONTACT US</a>
+        </div><br/>
+        <!-- Tags containing all the information regarding the seller -->
+        <h2>Seller Information</h2>
+        <!-- Creates a form which submits the information to the url below on submit, including javascript validation -->
+        <form name="myform" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="get" onSubmit="return formValidation()">
+            <!-- Asks the user to input a name -->
+            <label for="sellname">*Name:</label>
+            <input type="text" id="sellname" name="Name"><br><br>
+            <!-- Asks the user to input an email - will only take input of type email (e.g. @, .)-->
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="Email"><br><br>
+            <!-- Asks the user to input a number for cars submitted -->
+            <label for="carssubmit">Cars previously submitted:</label>
+            <input type="number" id="carssubmit" name="Cars previously submitted"><br><br>
+            <!-- Binary choice q for if a car has been previously bought - default response chosen is 'No' (radio buttons) -->
+            <label>Have you bought a car previously in the past 5 years?</label><br>
+            <input type="radio" id="yes" name="Boughtcar" value="Yes">
+            <label for="yes">Yes</label><br>
+
+            <input type="radio" id="no" name="Boughtcar" value="No" checked="checked">
+            <label for="no">No</label><br><br>
+            <!-- Tags containing all the information regarding the car being listed -->
+            <h2>Car Information</h2>
+            <!-- Asks user to input the car model -->
+            <label for="carmodel">Model:</label>
+            <input type="text" id="carmodel" name="Model"><br><br>
+            <!-- Asks user to input car make -->
+            <label for="carmake">Make:</label>
+            <input type="text" id="carmake" name="Make"><br><br>
+            <!-- Asks user to input a number for car year model -->
+            <label for="yearmodel">Year:</label>
+            <input type="number" id="yearmodel" name="Year"><br><br>
+            <!-- Asks user to input a number for car cost -->
+            <label for="carcost">Cost:</label>
+            <input type="number" id="carcost" name="Cost"><br><br>
+            <!-- Asks user to input a number for torque -->
+            <label for="torque">Torque (Nm):</label>
+            <input type="number" id="torque" name="Torque"><br><br>
+            <!-- Asks user to input a number for power -->
+            <label for="power">Power (kW):</label>
+            <input type="number" id="power" name="Power"><br><br>
+            <!-- Asks user to input text for cylinders -->
+            <label for="cylinders">Cylinders:</label>
+            <input type="text" id="cylinders" name="Cylinders"><br><br>
+            <!-- Asks user to select a car category from a variety of options (pulldown menu) -->
+            <label for="category">*Category:</label>
+            <select name="Category" id="category">
+                <option value="select">
+                    Select category
+                </option>
+                <option value="Electric">
+                    Electric
+                </option>
+                <option value="Sports">
+                    Sports
+                </option>
+            </select><br><br>
+            <!-- Asks user to select a car safety rating from a variety of options (radio buttons) -->
+            <label>*Safety Rating:</label><br>
+            <input type="radio" id="1Star" name="Safetyrating" value="1 star">
+            <label for="1Star">1 Star</label><br>
+
+            <input type="radio" id="2Stars" name="Safetyrating" value="2 stars">
+            <label for="2Stars">2 Stars</label><br>
+
+            <input type="radio" id="3Stars" name="Safetyrating" value="3 stars">
+            <label for="3Stars">3 Stars</label><br>
+
+            <input type="radio" id="4Stars" name="Safetyrating" value="4 stars">
+            <label for="4Stars">4 Stars</label><br>
+
+            <input type="radio" id="5Stars" name="Safetyrating" value="5 stars">
+            <label for="5Stars">5 Stars</label><br><br>
+            <!-- Asks the user to input a description of the car (textarea) -->
+            <textarea name="Description" rows="5" cols="60">Please type a general description of the car here</textarea><br><br>
+            <!-- Asks the user to tick each box where the specified extra applies (checkboxes) -->
+            <label>*Extras:</label><br>
+            <input type="checkbox" id="bluetooth" name="Extras" value="Bluetooth supported">
+            <label for="bluetooth">Bluetooth support</label><br>
+
+            <input type="checkbox" id="additionalcost" name="Extras" value="Addional cost included">
+            <label for="additionalcost">Additional cost</label><br>
+
+            <input type="checkbox" id="couponcode" name="Extras" value="Coupon code included">
+            <label for="couponcode">Coupon code</label><br>
+            <!-- Button for submitting form -->
+            <button type="submit" value="Submit">
+                <i>Submit</i>
+            </button><br>
+            <!-- Button for resetting form -->
+            <button type="reset" value="Reset">
+                <i>Reset</i>
+            </button><br>       
+        </form>
+        <!-- Copyright statement -->
+        <br/><footer>
+            <br>Connor Farrenden
+            <br><a href="mailto:c3374676@uon.edu.au">c3374676@uon.edu.au</a>
+            <br><a href="https://www.newcastle.edu.au/course/SENG1050">Website Development Team</a>
+            <address>Copyright 2021 Jim's Cars</address>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet  href="informationdisplay.xsl" type="text/xsl"?>
+
+<!-- 
+    Filename: electriccars.xml 
+    Author: Connor Farrenden
+    Date: 18/10/21
+-->
+
+<!-- DTD -->
+<!DOCTYPE cars [
+<!-- Can create multiple cars -->
+    <!ELEMENT cars (category, car*)>
+    <!ELEMENT category (title)>
+        <!ELEMENT title (#PCDATA)>
+    <!ELEMENT car (carModel, description, cost, make, yearModel, torque, power, cylinders?, safetyRating, extras+, couponCode?, reviews*, picture+, url)>
+    <!-- Extras includes bluetooth and additionalCost as child elements -->
+    <!ELEMENT extras (bluetooth, additionalCost)>
+        <!-- The required attributes (child elements) for each car in order -->
+        <!ELEMENT carModel (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT cost (#PCDATA)>
+        <!ELEMENT make (#PCDATA)>
+        <!-- All cars will have a year model of 2021 -->
+        <!ENTITY year "2021">
+        <!ELEMENT yearModel (#PCDATA)>
+        <!ELEMENT torque (#PCDATA)>
+        <!ELEMENT power (#PCDATA)>
+        <!ELEMENT cylinders (#PCDATA)>
+        <!ELEMENT safetyRating (#PCDATA)>
+        <!ELEMENT bluetooth (#PCDATA)>
+        <!ELEMENT additionalCost (#PCDATA)>
+        <!ELEMENT couponCode (#PCDATA)>
+        <!ELEMENT reviews (#PCDATA)>
+        <!ELEMENT picture (#PCDATA)>
+        <!ELEMENT url (#PCDATA)>    
+]>
+<!-- XML Elements -->
+<!-- Cars element -->
+<cars>
+    <!-- Category page for car contained within title -->
+    <category>
+        <title>ELECTRIC CARS</title>
+    </category>
+    <!-- Create a car element (comments are the same for each car) -->
+    <car>
+        <!-- Model of car -->
+        <carModel>Model 3</carModel>
+        <!-- General description of car -->
+        <description>The Tesla Model 3 is an electric vehicle supporting power, comfort and maximised safety. The Model 3 supports various colours, such as red, blue and silver, and 
+        an array of features such as autopilot safety, range and convenience features, including smartphone key access and a large touch screen for bluetooth and GPS purposes.</description>
+        <!-- Car cost -->
+        <cost>$59,990</cost>
+        <!-- Car make -->
+        <make>Tesla</make>
+        <!-- Year (constant value for each) -->
+        <yearModel>&year;</yearModel>
+        <!-- Torque in Nm -->
+        <torque>375Nm</torque>
+        <!-- Power in terms of kW -->
+        <power>188kW</power>
+        <!-- Number of cylinders (electric cars will be N/A) -->
+        <cylinders>N/A</cylinders>
+        <!-- Safety rating in stars -->
+        <safetyRating>5 Star Safety Rating</safetyRating>
+        <!-- Extras and child elements -->
+        <extras>
+            <!-- Bluetooth support or not -->
+            <bluetooth>Bluetooth support</bluetooth>
+            <!-- Additional cost to be paid -->
+            <additionalCost>$399</additionalCost>
+        </extras>
+        <!-- Coupon code (if none - N/A)-->
+        <couponCode>N/A</couponCode>
+        <!-- Car review -->
+        <reviews>The Tesla Model 3 is one of the most highly regarded eletric vehicles on the market. With the Top Gear team making the remark that Model 3 is:
+        "The most impressive electric car this side of a Porsche Taycan. Fresh design, a sense of humour, and backed up by Superchargers".</reviews>
+        <!-- Contains image of car -->
+        <picture>images/TeslaModel3.png</picture>
+        <!-- URL link to manufacturers website -->
+        <url>https://www.tesla.com/en_au/model3</url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <carModel>e-Tron</carModel>
+        <description>The e-Tron is a family eletric-SUV featuring a clean and futuristic interior design and finish, whilst still appearing like other Audi vehicles.
+        The e-Tron focuses on delivering both practical performance and superb luxury, providing the convenience and most upmarket features of other electric vehicles for a premium price.</description>
+        <cost>$136,472</cost>
+        <make>Audi</make>
+        <yearModel>&year;</yearModel>
+        <torque>460Nm</torque>
+        <power>220kW</power>
+        <cylinders>N/A</cylinders>
+        <safetyRating>4 Star Safety Rating</safetyRating>
+        <extras>
+            <bluetooth>Bluetooth support</bluetooth>
+            <additionalCost>$2999</additionalCost>
+        </extras>
+        <couponCode>TRON2021</couponCode>
+        <reviews> The e-Tron is definitely up there with many other electric vehicles, but still lacks behind some competitors. CarExpert editor Paul Maric states that:
+        "The Audi e-Tron feels like it’s almost there" and "from a technology and range standpoint, it’s left for dead by vehicles like the Jaguar I-Pace and Tesla Model X".</reviews>
+        <picture>images/Audie-Tron.png</picture>
+        <url>https://www.audi.com.au/au/web/en/models/tron/audi-e-tron.html</url>
+    </car>
+    <!-- Create a car element -->
+    <car>
+        <carModel>Ioniq 5</carModel>
+        <description>The Ioniq 5 is a midsize eletric SUV featuring futuristic and eletric vehicle-style appearance. The Ioniq 5 provides large passenger space, swish exterior design with futuristic
+        interior designing, alongside a 300-mile range and swift charging speeds for optimal driving distance and overall performance.</description>
+        <cost>$71,000</cost>
+        <make>Hyundai</make>
+        <yearModel>&year;</yearModel>
+        <torque>605Nm</torque>
+        <power>230kW</power>
+        <cylinders>N/A</cylinders>
+        <safetyRating>4 Star Safety Rating</safetyRating>
+        <extras>
+            <bluetooth>Bluetooth support</bluetooth>
+            <additionalCost>$299</additionalCost>
+        </extras>
+        <couponCode>N/A</couponCode>
+        <reviews>Although lacking compared to its rivals, the Ioniq 5 proves to be an efficient and large electric car for daily driving with a stylish appeal. Carwow's Mat Watson stated: 
+        "The Hyundai Ioniq 5’s incredible retro styling really stands out, and it has a plush, comfortable interior that’s very spacious. Alternatives can go further on a charge, though".</reviews>
+        <picture>images/HyundaiIoniq5.png</picture>
+        <url>https://www.hyundai.com/au/en/cars/coming-soon/ioniq-5</url>
+    </car>
+</cars>
